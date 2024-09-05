@@ -179,7 +179,6 @@ GameObject:
   - component: {fileID: 503193685}
   - component: {fileID: 503193688}
   - component: {fileID: 503193687}
-  - component: {fileID: 503193686}
   m_Layer: 0
   m_Name: PlayerBody
   m_TagString: Untagged
@@ -202,29 +201,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1086507117}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &503193686
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503193684}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &503193687
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -484,7 +460,6 @@ GameObject:
   - component: {fileID: 1086507115}
   - component: {fileID: 1086507114}
   - component: {fileID: 1086507118}
-  - component: {fileID: 1086507119}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -504,13 +479,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5258eadec17f0f4d889c447e5d24c4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
+  controller: {fileID: 1086507115}
   speed: 6
   turnSmoothTime: 0.1
   cam: {fileID: 558481151}
   gravity: -20
-  groundCheck: {fileID: 0}
-  groundDist: 0
+  groundCheck: {fileID: 95513685}
+  groundDist: 1
   groundMask:
     serializedVersion: 2
     m_Bits: 64
@@ -573,29 +548,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashSpeed: 20
   dashTime: 0.25
---- !u!136 &1086507119
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1086507113}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1488051502
 GameObject:
   m_ObjectHideFlags: 0
