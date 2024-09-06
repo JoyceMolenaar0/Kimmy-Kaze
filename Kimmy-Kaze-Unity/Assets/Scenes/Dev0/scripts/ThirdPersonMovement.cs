@@ -28,7 +28,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     //new ground detect
 
-    public float rayLength = 1.1f;  // De lengte van de ray (iets langer dan de afstand van het object tot de grond)
+    private float rayLength = 2.1f;  // De lengte van de ray (iets langer dan de afstand van het object tot de grond)
     public LayerMask groundLayer;   // De laag van de grond (optioneel, kan gebruikt worden om specifiek te controleren op de grond)
     [SerializeField] private bool isGrounded;        // Variabele om te controleren of het object op de grond staat
 
@@ -81,7 +81,7 @@ public class ThirdPersonMovement : MonoBehaviour
         
     }
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded && dir.magnitude <= 0.05f)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
 
