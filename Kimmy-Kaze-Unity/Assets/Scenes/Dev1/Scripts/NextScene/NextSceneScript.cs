@@ -23,7 +23,7 @@ public class NextSceneScript : MonoBehaviour
 
     public void GoToScene2()
     {
-        SceneManager.LoadScene("Scene2Naam");
+        SceneManager.LoadScene(1);
     }
 
     public void QuitTheGame () 
