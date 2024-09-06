@@ -5,19 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class die : MonoBehaviour
 {
-
-    Scene sceneLoaded = SceneManager.GetActiveScene();
-    // loads next level
     
-    public int sceneID = SceneManager.GetActiveScene().buildIndex;
     public Transform target;
     public float proximityThreshold = 5f;
-    public int nextScene = 0;
+    public int nextScene;
 
-    private void Start()
-    {
-        nextScene = sceneID + 1;
-    }
     void Update()
     {
         DetectProximity();
@@ -34,7 +26,7 @@ public class die : MonoBehaviour
             if ((distance <= proximityThreshold) && (Input.GetKeyDown(KeyCode.Q)))
             {
                 Debug.Log("Explode");
-                SceneManager.LoadScene(sceneLoaded.buildIndex + 1);
+                SceneManager.LoadScene(nextScene);
 
             }
             else if (distance <= proximityThreshold)
